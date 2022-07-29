@@ -2,6 +2,7 @@ package app.web.thevasukabra.todolist;
 
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -58,6 +59,7 @@ public class MainActivity extends AppCompatActivity implements DialogCloseListen
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Log.d("FAB", "fab button is clicked");
                 AddNewTask.newInstance().show(getSupportFragmentManager(), AddNewTask.TAG);
             }
         });
